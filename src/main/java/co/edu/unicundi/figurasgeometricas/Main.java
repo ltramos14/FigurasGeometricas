@@ -22,9 +22,7 @@ public class Main {
     int figureTriangle;
     
     public Main() {
-        
-        Rectangle rect = new Rectangle(13, 6);
-        rect.printAreaAndPerimeter();
+        mainHome();
     }
     
     public static void main(String[] args) {
@@ -34,6 +32,9 @@ public class Main {
     public void mainHome() {
         
         Scanner entry = new Scanner(System.in);
+        
+        System.out.println("Digite una opción");
+        this.figureType = entry.nextInt();
         
         switch (figureType){
             case 1: 
@@ -62,10 +63,10 @@ public class Main {
                 squa.printAreaAndPerimeter();
                 break;
             case 4:
-                // Triágulo
+                // Triángulo
                 System.out.println("Tipo de triangulo");
-                int typeTri = entry.nextInt();
-                mainTriangleType(typeTri);
+                this.figureTriangle = entry.nextInt();
+                mainTriangleType(figureTriangle);
                 break;
             default:
                 System.out.println("No existen resultados para esa opción!!");
@@ -75,6 +76,7 @@ public class Main {
     public void mainTriangleType(int triangleType) {
         
         Scanner entry = new Scanner(System.in);
+        
         System.out.println("Digite la base del Triángulo");
         int base = entry.nextInt();
         System.out.println("Digite la altura del Triángulo");
