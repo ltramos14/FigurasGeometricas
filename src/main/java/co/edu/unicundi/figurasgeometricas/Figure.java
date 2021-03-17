@@ -3,22 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
 package co.edu.unicundi.figurasgeometricas;
 
 /**
- * 
- * @author Tatiana Ramos Villanueva
- * @author Nicolás Nieto Cárdenas
- * @version 1.0.0
- * @since 1.0.0
+ *
+ * @author nicon
  */
-public class Main {
-
-    public Main() {
-    }
+public class Figure {
     
-    public static void main(String[] args) {
-        Main init = new Main();
-    }
 }
