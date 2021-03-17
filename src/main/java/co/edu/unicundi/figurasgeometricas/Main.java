@@ -16,9 +16,13 @@ package co.edu.unicundi.figurasgeometricas;
 public class Main {
 
     public Main() {
+        
+        Rectangle rect = new Rectangle(13, 6);
+        rect.printAreaAndPerimeter();
     }
     
     public static void main(String[] args) {
         Main init = new Main();
-    }
+    }  
+    
 }
