@@ -9,22 +9,16 @@ package co.edu.unicundi.figurasgeometricas;
  *
  * @author nicon
  */
-public class Figure {
+public abstract class Figure {
     
     public double area;
     
     public double perimeter;
    
     
-    public void calculateArea() {
-        System.out.println("EL ÁREA DE LA FIGURA ES: " + area);
-    }
+    public abstract void calculateArea();
     
-    public void calculatePerimeter() {
-         System.out.println("EL PERÍMETRO DE LA FIGURA ES : " + perimeter);
-    }
+    public abstract void calculatePerimeter();
     
-    public void printAreaAndPerimeter() {
-        System.out.println(area + perimeter);
-    }
+    public abstract void printAreaAndPerimeter();
 }
