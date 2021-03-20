@@ -9,7 +9,7 @@ package co.edu.unicundi.figurasgeometricas;
  * 
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Square extends Figure{
@@ -38,15 +38,12 @@ public class Square extends Figure{
         System.out.println("EL PERÍMETRO DEL CUADRADO ES: " + super.getPerimeter());
     }
 
-    
     @Override
     public void printResultsHistory() {
        System.out.println("RESUMEN DATOS: CUADRADO \n " + "Lado: " + side +
                 "\n Área: " + super.getArea() + "\n Perímetro: " + super.getPerimeter());
-        
     }
-    
-    
+
     public int getSide() {
         return side;
     }

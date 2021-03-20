@@ -9,7 +9,7 @@ package co.edu.unicundi.figurasgeometricas;
  * 
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Rectangle extends Figure{
@@ -48,7 +48,6 @@ public class Rectangle extends Figure{
                  "\n Perímetro: "  + super.getPerimeter());      
     }
 
-    
     public int getBase() {
         return base;
     }

@@ -12,16 +12,16 @@ import java.util.Scanner;
  *
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Main {
 
-    int figureType;
+    private int figureType;
 
-    int figureTriangle;
+    private int figureTriangle;
     
-    ArrayList<IResultsHistory> historyRes;
+    private ArrayList<IResultsHistory> historyRes;
 
     public Main() {
         this.historyRes = new ArrayList<IResultsHistory>();
@@ -33,12 +33,10 @@ public class Main {
     }
 
     public void mainHome() {
-
         Scanner entry = new Scanner(System.in);
         String answer;
 
         do {
-
             System.out.println("Digite una opción");
             this.figureType = entry.nextInt();
 
@@ -57,7 +55,6 @@ public class Main {
                     int base = entry.nextInt();
                     System.out.println("Digite la altura del Rectángulo");
                     int heigth = entry.nextInt();
-
                     IResultsHistory rect = new Rectangle(base, heigth);
                     ((Rectangle)rect).printAreaAndPerimeter();
                     historyRes.add(rect);
@@ -66,7 +63,6 @@ public class Main {
                     // Cuadrado
                     System.out.println("Digite el lado del Cuadrado");
                     int side = entry.nextInt();
-
                     IResultsHistory squa = new Square(side);
                     ((Square)squa).printAreaAndPerimeter();
                     historyRes.add(squa);
@@ -80,19 +76,11 @@ public class Main {
                 default:
                     System.out.println("No existen resultados para esa opción!!");
             }
-
             System.out.println("Desea continuar?:");
             answer = entry.next();
             entry.skip("\n");
-
         } while (!answer.equalsIgnoreCase("no"));
-        
-        System.out.println("HISTORIAL DE CÁLCULOS REALIZADOS");
-        
-        historyRes.forEach(i -> {
-            i.printResultsHistory();
-        });
-
+        showResultsHistory();
     }
 
     public void mainTriangleType(int triangleType) {
@@ -139,5 +127,14 @@ public class Main {
             default:
                 System.out.println("No existen resultados para esa opción!!");
         }
+    }
+    
+    public void showResultsHistory() {
+        
+        System.out.println("HISTORIAL DE CÁLCULOS REALIZADOS");
+        this.historyRes.forEach(i -> {
+            i.printResultsHistory();
+        });
+        
     }
 }

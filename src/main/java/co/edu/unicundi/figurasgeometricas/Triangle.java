@@ -9,7 +9,7 @@ package co.edu.unicundi.figurasgeometricas;
  * 
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public class Triangle extends Figure {
@@ -34,7 +34,13 @@ public class Triangle extends Figure {
 
     @Override
     public void calculateArea() {
-        super.setArea((base * height) / 2);
+        double area = (base * height) / 2;
+        
+        if (Double.isInfinite(area)) {
+            System.out.println("Area indeterminada");
+        } else {
+            super.setArea(area);
+        }
     }
 
     @Override
@@ -73,8 +79,6 @@ public class Triangle extends Figure {
                  "\n Perímetro: "  + super.getPerimeter());
     }
     
-    
-
     public int getBase() {
         return base;
     }

@@ -9,7 +9,7 @@ package co.edu.unicundi.figurasgeometricas;
  * 
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
- * @version 1.0.0
+ * @version 1.1.0
  * @since 1.0.0
  */
 public abstract class Figure implements IResultsHistory{
