@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
+ * Clase principal que inicia el programa de las figuras geométricas
  *
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
@@ -17,66 +18,93 @@ import java.util.Scanner;
  */
 public class Main {
 
+    /**
+     * Variable entera que almacena el tipo de figura elegida por el usuario en
+     * consola
+     */
     private int figureType;
 
+    /**
+     * Variable entera que almacena el tipo de triángulo elegido por el usuario
+     * en consola
+     */
     private int figureTriangle;
-    
+
+    /**
+     * ArrayList que va almacenando el historial de resultados a lo largo de la
+     * ejecución del programa
+     */
     private ArrayList<IResultsHistory> historyRes;
 
+    /**
+     * Constructor que incializa la ejecución del programa
+     */
     public Main() {
         this.historyRes = new ArrayList<IResultsHistory>();
         mainHome();
     }
 
+    /**
+     * Método que incia la ejecución del programa
+     *
+     * @param args
+     */
     public static void main(String[] args) {
+        //Instancia de la clase Main
         Main init = new Main();
     }
 
+    /**
+     * Método que contiene el menú de opciones presentado a lo largo de la
+     * ejecución programa
+     */
     public void mainHome() {
         Scanner entry = new Scanner(System.in);
         String answer;
 
         do {
-            System.out.println("Digite una opción");
+            System.out.println("***** MENÚ DE OPCIONES [PROGRAMA FIGURAS GEOMÉTRICAS] *****");
+            System.out.println("1. Círculo \n2. Rectángulo \n3. Cuadrado \n4. Triángulo");
+            System.out.println("- Digite una opción:");
             this.figureType = entry.nextInt();
 
             switch (figureType) {
                 case 1:
                     // Circulo
-                    System.out.println("Digite el radio del Círculo");
+                    System.out.println("---- *HA SELECCIONADO CÍRCULO* ---- \nDigite su radio: ");
                     int radio = entry.nextInt();
                     IResultsHistory cir = new Circle(radio);
-                    ((Circle)cir).printAreaAndPerimeter();                  
+                    ((Circle) cir).printAreaAndPerimeter();
                     historyRes.add(cir);
                     break;
                 case 2:
                     // Rectángulo
-                    System.out.println("Digite la base del Rectángulo");
+                    System.out.println("---- *HA SELECCIONADO RECTÁNGULO* ---- \nDigite su base y altura: ");
                     int base = entry.nextInt();
-                    System.out.println("Digite la altura del Rectángulo");
                     int heigth = entry.nextInt();
                     IResultsHistory rect = new Rectangle(base, heigth);
-                    ((Rectangle)rect).printAreaAndPerimeter();
+                    ((Rectangle) rect).printAreaAndPerimeter();
                     historyRes.add(rect);
                     break;
                 case 3:
                     // Cuadrado
-                    System.out.println("Digite el lado del Cuadrado");
+                    System.out.println("---- *HA SELECCIONADO CUADRADO* ---- \nDigite un de sus lados: ");
                     int side = entry.nextInt();
                     IResultsHistory squa = new Square(side);
-                    ((Square)squa).printAreaAndPerimeter();
+                    ((Square) squa).printAreaAndPerimeter();
                     historyRes.add(squa);
                     break;
                 case 4:
                     // Triángulo
-                    System.out.println("Tipo de triangulo");
+                    System.out.println("---- *HA SELECCIONADO TRIÁNGULO* ----");
+                    System.out.println("1.Isósceles \n2.Equilátero \n3.Escaleno \nDigite una opción: ");
                     this.figureTriangle = entry.nextInt();
                     mainTriangleType(figureTriangle);
                     break;
                 default:
-                    System.out.println("No existen resultados para esa opción!!");
+                    System.out.println("¡¡No existen resultados para la opción digitada!!");
             }
-            System.out.println("Desea continuar?:");
+            System.out.println("¿Desea continuar?: ");
             answer = entry.next();
             entry.skip("\n");
         } while (!answer.equalsIgnoreCase("no"));
@@ -87,54 +115,57 @@ public class Main {
 
         Scanner entry = new Scanner(System.in);
 
-        System.out.println("Digite la base del Triángulo");
+        System.out.println("Digite la base y altura del Triángulo");
         int base = entry.nextInt();
-        System.out.println("Digite la altura del Triángulo");
         int heigth = entry.nextInt();
 
         switch (triangleType) {
             case 1:
-                // Isoseles
-                System.out.println("Digite el valor de los dos lados iguales del Triángulo Isoseles");
+                // Isosceles
+                System.out.println("---- *HA SELECCIONADO Triángulo Isósceles* ----");
+                System.out.println("Digite el valor de sus dos lados iguales: ");
                 int sideEqual = entry.nextInt();
-                System.out.println("Digite el valor del lado diferente del Triángulo Isoseles");
+                System.out.println("Digite el valor de su lado diferente: ");
                 int side = entry.nextInt();
 
                 IResultsHistory isoseles = new Triangle(base, heigth, sideEqual, sideEqual, side);
-                ((Triangle)isoseles).printAreaAndPerimeter();
+                ((Triangle) isoseles).printAreaAndPerimeter();
                 historyRes.add(isoseles);
                 break;
             case 2:
                 // Equilatero
-                System.out.println("Digite uno de los lados del Triángulo Equilatero");
+                System.out.println("---- *HA SELECCIONADO Triángulo Equilátero* ----\nDigite uno de sus lados: ");
                 int sideEquil = entry.nextInt();
                 IResultsHistory equilater = new Triangle(base, heigth, sideEquil, sideEquil, sideEquil);
-                ((Triangle)equilater).printAreaAndPerimeter();
+                ((Triangle) equilater).printAreaAndPerimeter();
                 historyRes.add(equilater);
                 break;
             case 3:
                 // Escaleno
-                System.out.println("Digite el primer lado del Triángulo Escaleno");
+                System.out.println("---- *HA SELECCIONADO Triángulo Escalemo* ----\"Digite el primer lado: ");
                 int sideA = entry.nextInt();
-                System.out.println("Digite el segundo lado del Triángulo Escaleno");
+                System.out.println("Digite el segundo lado: ");
                 int sideB = entry.nextInt();
-                System.out.println("Digite el tercer lado del Triángulo Escaleno");
+                System.out.println("Digite el tercer lado: ");
                 int sideC = entry.nextInt();
                 IResultsHistory escalene = new Triangle(base, heigth, sideA, sideB, sideC);
-                ((Triangle)escalene).printAreaAndPerimeter();
+                ((Triangle) escalene).printAreaAndPerimeter();
                 historyRes.add(escalene);
                 break;
             default:
-                System.out.println("No existen resultados para esa opción!!");
+                System.out.println("¡¡No existen resultados para la opción digitada!!");
         }
     }
-    
+
+    /**
+     * Método que utiliza un forEach para imprimir en consola los resultados
+     */
     public void showResultsHistory() {
-        
-        System.out.println("HISTORIAL DE CÁLCULOS REALIZADOS");
+
+        System.out.println("***** HISTORIAL DE  CÁLCULOS REALIZADOS *****");
         this.historyRes.forEach(i -> {
             i.printResultsHistory();
         });
-        
+
     }
 }
