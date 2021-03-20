@@ -82,4 +82,4 @@ public class Square extends Figure{
         this.side = side;
     }
 
-}
+}   
