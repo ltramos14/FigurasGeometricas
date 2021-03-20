@@ -7,13 +7,14 @@ package co.edu.unicundi.figurasgeometricas;
 
 /**
  * Clase hija de Figure que calcular el área y el perímetro de un cuadrado
+ *
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
  * @version 1.1.0
  * @since 1.0.0
  */
-public class Square extends Figure{
-    
+public class Square extends Figure {
+
     /**
      * Variable entera que almacena el valor de los lados de un cuadrado
      */
@@ -21,15 +22,16 @@ public class Square extends Figure{
 
     /**
      * Constructor sobrecargado de la Square
-     * @param side 
+     *
+     * @param side
      */
     public Square(int side) {
         this.side = side;
     }
 
     /**
-     * Método sobre escrito que calcula el área del cuadrado
-     * El área calculada se envía a la clase padre por medio del método Set
+     * Método sobre escrito que calcula el área del cuadrado El área calculada
+     * se envía a la clase padre por medio del método Set
      */
     @Override
     public void calculateArea() {
@@ -37,8 +39,8 @@ public class Square extends Figure{
     }
 
     /**
-     * Método sobre escrito que calcula el perímetro del cuadrado
-     * El perímetro calculado se envía a la clase padre por medio del método Set
+     * Método sobre escrito que calcula el perímetro del cuadrado El perímetro
+     * calculado se envía a la clase padre por medio del método Set
      */
     @Override
     public void calculatePerimeter() {
@@ -46,8 +48,9 @@ public class Square extends Figure{
     }
 
     /**
-     * Método sobrescrito que activa los métodos que calculan el área y el perímetro
-     * En este método también se imprimen en consola los valores calculados
+     * Método sobrescrito que activa los métodos que calculan el área y el
+     * perímetro En este método también se imprimen en consola los valores
+     * calculados
      */
     @Override
     public void printAreaAndPerimeter() {
@@ -58,16 +61,19 @@ public class Square extends Figure{
     }
 
     /**
-     * Método implententado de la Interface que todos los atributos del objeto cuadrado
+     * Método implententado de la Interface que todos los atributos del objeto
+     * cuadrado
      */
     @Override
     public void printResultsHistory() {
-       System.out.println("RESUMEN DATOS: CUADRADO \n " + "Lado: " + side +
-                "\n Área: " + super.getArea() + "\n Perímetro: " + super.getPerimeter());
+        System.out.println("RESUMEN DATOS: CUADRADO \n " + "Lado: " + side
+                + "\n Área: " + super.getArea() + "\n Perímetro: " + super.getPerimeter());
     }
 
     /**
-     * Método encapsulado que obtiene el valor de los lados de un objeto cuadrado
+     * Método encapsulado que obtiene el valor de los lados de un objeto
+     * cuadrado
+     *
      * @return valor de la variable lado
      */
     public int getSide() {
@@ -76,10 +82,11 @@ public class Square extends Figure{
 
     /**
      * Metodo que asigna un valor a los lados de un objeto cuadrado
-     * @param side 
+     *
+     * @param side
      */
     public void setSide(int side) {
         this.side = side;
     }
 
-}   
+}

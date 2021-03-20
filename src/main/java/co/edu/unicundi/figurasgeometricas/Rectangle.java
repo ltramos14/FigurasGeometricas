@@ -7,18 +7,19 @@ package co.edu.unicundi.figurasgeometricas;
 
 /**
  * Clase hija de Figure que calcular el área y el perímetro de un rectágulo
+ *
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
  * @version 1.1.0
  * @since 1.0.0
  */
-public class Rectangle extends Figure{
+public class Rectangle extends Figure {
 
     /**
      * Variable entera que almacena la base de un rectángulo
      */
     private int base;
-    
+
     /**
      * Variable enter que almacena la altura de un rectángulo
      */
@@ -26,8 +27,9 @@ public class Rectangle extends Figure{
 
     /**
      * Constructor sobrecargado de la clase Rectangle
+     *
      * @param base
-     * @param height 
+     * @param height
      */
     public Rectangle(int base, int height) {
         this.base = base;
@@ -35,8 +37,8 @@ public class Rectangle extends Figure{
     }
 
     /**
-     * Método sobre escrito que calcula el área del rectángulo
-     * El área calculada se envía a la clase padre por medio del método Set
+     * Método sobre escrito que calcula el área del rectángulo El área calculada
+     * se envía a la clase padre por medio del método Set
      */
     @Override
     public void calculateArea() {
@@ -44,17 +46,18 @@ public class Rectangle extends Figure{
     }
 
     /**
-     * Método sobre escrito que calcula el perímetro del rectángulo
-     * El perímetro calculado se envía a la clase padre por medio del método Set
+     * Método sobre escrito que calcula el perímetro del rectángulo El perímetro
+     * calculado se envía a la clase padre por medio del método Set
      */
     @Override
     public void calculatePerimeter() {
-       super.setPerimeter(2 * (base + height));      
+        super.setPerimeter(2 * (base + height));
     }
 
     /**
-     * Método sobrescrito que activa los métodos que calculan el área y el perímetro
-     * En este método también se imprimen en consola los valores calculados
+     * Método sobrescrito que activa los métodos que calculan el área y el
+     * perímetro En este método también se imprimen en consola los valores
+     * calculados
      */
     @Override
     public void printAreaAndPerimeter() {
@@ -65,17 +68,20 @@ public class Rectangle extends Figure{
     }
 
     /**
-     * Método implententado de la Interface que todos los atributos del objeto rectángulo
+     * Método implententado de la Interface que todos los atributos del objeto
+     * rectángulo
      */
     @Override
     public void printResultsHistory() {
-         System.out.println("RESUMEN DATOS: RECTÁNGULO \n " + "Base: " + base +
-                 "\n Altura: " + height + "\n Área: " + super.getArea() + 
-                 "\n Perímetro: "  + super.getPerimeter());      
+        System.out.println("RESUMEN DATOS: RECTÁNGULO \n " + "Base: " + base
+                + "\n Altura: " + height + "\n Área: " + super.getArea()
+                + "\n Perímetro: " + super.getPerimeter());
     }
 
     /**
-     * Método encapsulado que obtiene el valor de la base de un objeto rectángulo
+     * Método encapsulado que obtiene el valor de la base de un objeto
+     * rectángulo
+     *
      * @return valor de la variable base
      */
     public int getBase() {
@@ -84,7 +90,8 @@ public class Rectangle extends Figure{
 
     /**
      * Metodo que asigna un valor a la base de un objeto rectángulo
-     * @param base 
+     *
+     * @param base
      */
     public void setBase(int base) {
         this.base = base;
@@ -92,6 +99,7 @@ public class Rectangle extends Figure{
 
     /**
      * Metodo que asigna un valor a la altura de un objeto rectángulo
+     *
      * @return valor de la variable altura
      */
     public int getHeight() {
@@ -100,10 +108,11 @@ public class Rectangle extends Figure{
 
     /**
      * Metodo que asigna un valor a la altura de un objeto rectángulo
-     * @param height 
+     *
+     * @param height
      */
     public void setHeight(int height) {
         this.height = height;
     }
-    
+
 }

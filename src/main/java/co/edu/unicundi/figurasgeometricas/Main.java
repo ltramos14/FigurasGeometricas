@@ -88,7 +88,7 @@ public class Main {
                     break;
                 case 3:
                     // Cuadrado
-                    System.out.println("---- *HA SELECCIONADO CUADRADO* ---- \nDigite un de sus lados: ");
+                    System.out.println("---- *HA SELECCIONADO CUADRADO* ---- \nDigite uno de sus lados: ");
                     int side = entry.nextInt();
                     IResultsHistory squa = new Square(side);
                     ((Square) squa).printAreaAndPerimeter();
@@ -142,7 +142,7 @@ public class Main {
                 break;
             case 3:
                 // Escaleno
-                System.out.println("---- *HA SELECCIONADO Triángulo Escalemo* ----\"Digite el primer lado: ");
+                System.out.println("---- *HA SELECCIONADO Triángulo Escaleno* ----\nDigite el primer lado: ");
                 int sideA = entry.nextInt();
                 System.out.println("Digite el segundo lado: ");
                 int sideB = entry.nextInt();

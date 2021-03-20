@@ -7,6 +7,7 @@ package co.edu.unicundi.figurasgeometricas;
 
 /**
  * Clase hija de Figure que calcular el área y el perímetro de un triángulo
+ *
  * @author Tatiana Ramos Villanueva
  * @author Nicolás Nieto Cárdenas
  * @version 1.1.0
@@ -41,11 +42,12 @@ public class Triangle extends Figure {
 
     /**
      * Constructor sobrecargado de la clase Triangle
+     *
      * @param base
      * @param heigth
      * @param sideA
      * @param sideB
-     * @param sideC 
+     * @param sideC
      */
     public Triangle(int base, int heigth, int sideA, int sideB, int sideC) {
         this.base = base;
@@ -56,13 +58,13 @@ public class Triangle extends Figure {
     }
 
     /**
-     * Método sobre escrito que calcula el área del triangulo
-     * El área calculada se envía a la clase padre por medio del método Set
+     * Método sobre escrito que calcula el área del triangulo El área calculada
+     * se envía a la clase padre por medio del método Set
      */
     @Override
     public void calculateArea() {
         double area = (base * height) / 2;
-        
+
         if (Double.isInfinite(area)) {
             System.out.println("Area indeterminada");
         } else {
@@ -71,8 +73,8 @@ public class Triangle extends Figure {
     }
 
     /**
-     * Método sobre escrito que calcula el perímetro del triangulo
-     * El perímetro calculado se envía a la clase padre por medio del método Set
+     * Método sobre escrito que calcula el perímetro del triangulo El perímetro
+     * calculado se envía a la clase padre por medio del método Set
      */
     @Override
     public void calculatePerimeter() {
@@ -80,9 +82,10 @@ public class Triangle extends Figure {
     }
 
     /**
-     * Método sobrescrito que activa los métodos que calculan el área y el perímetro
-     * En este método también se imprimen en consola los valores calculados
-     * Se valida el tipo de triángulo y según eso lo imprime el tipo en consola
+     * Método sobrescrito que activa los métodos que calculan el área y el
+     * perímetro En este método también se imprimen en consola los valores
+     * calculados Se valida el tipo de triángulo y según eso lo imprime el tipo
+     * en consola
      */
     @Override
     public void printAreaAndPerimeter() {
@@ -93,33 +96,35 @@ public class Triangle extends Figure {
             // Equilátro
             System.out.println("EL ÁREA DEL TRIÁNGULO EQUILÁTERO ES: " + super.getArea());
             System.out.println("EL PERÍMETRO DEL TRIÁNGULO EQUILÁTERO  ES: " + super.getPerimeter());
-            
+
         } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
             // Isóseles
             System.out.println("EL ÁREA DEL TRIÁNGULO ISÓSCELES ES: " + super.getArea());
             System.out.println("EL PERÍMETRO DEL TRIÁNGULO ISÓSCELES  ES: " + super.getPerimeter());
-            
+
         } else {
             // Escaleno
             System.out.println("EL ÁREA DEL TRIÁNGULO ESCALENO ES: " + super.getArea());
             System.out.println("EL PERÍMETRO DEL TRIÁNGULO ESCALENO  ES: " + super.getPerimeter());
-        
+
         }
     }
 
     /**
-     * Método implententado de la Interface que todos los atributos del objeto triángulo
+     * Método implententado de la Interface que todos los atributos del objeto
+     * triángulo
      */
     @Override
     public void printResultsHistory() {
-         System.out.println("RESUMEN DATOS: TRIÁNGULO \n " + "Base: " + base +
-                 "\n Altura: " + height + "\n Área: " + super.getArea() + "\n Lado A: "
-                 + sideA + "\n Lado B: " + sideB + "\n Lado C: "  + sideC +
-                 "\n Perímetro: "  + super.getPerimeter());
+        System.out.println("RESUMEN DATOS: TRIÁNGULO \n " + "Base: " + base
+                + "\n Altura: " + height + "\n Área: " + super.getArea() + "\n Lado A: "
+                + sideA + "\n Lado B: " + sideB + "\n Lado C: " + sideC
+                + "\n Perímetro: " + super.getPerimeter());
     }
-    
+
     /**
      * Método encapsulado que obtiene el valor de la base de un objeto triángulo
+     *
      * @return valor de la variable base
      */
     public int getBase() {
@@ -128,7 +133,8 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor a la base de un objeto triángulo
-     * @param base 
+     *
+     * @param base
      */
     public void setBase(int base) {
         this.base = base;
@@ -136,6 +142,7 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor a la altura de un objeto triángulo
+     *
      * @return valor de la variable altura
      */
     public int getHeight() {
@@ -144,7 +151,8 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor a la altura de un objeto triángulo
-     * @param height 
+     *
+     * @param height
      */
     public void setHeight(int height) {
         this.height = height;
@@ -152,6 +160,7 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor al lado A de un objeto triángulo
+     *
      * @return valor de la variable lado A
      */
     public int getSideA() {
@@ -160,7 +169,8 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor al lado A de un objeto triángulo
-     * @param sideA  
+     *
+     * @param sideA
      */
     public void setSideA(int sideA) {
         this.sideA = sideA;
@@ -168,6 +178,7 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor al lado B de un objeto triángulo
+     *
      * @return valor de la variable altura
      */
     public int getSideB() {
@@ -176,7 +187,8 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor al lado B de un objeto triángulo
-     * @param sideB  
+     *
+     * @param sideB
      */
     public void setSideB(int sideB) {
         this.sideB = sideB;
@@ -184,6 +196,7 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor al lado C de un objeto triángulo
+     *
      * @return valor de la variable altura
      */
     public int getSideC() {
@@ -192,7 +205,8 @@ public class Triangle extends Figure {
 
     /**
      * Metodo que asigna un valor al lado C de un objeto triángulo
-     * @param sideC  
+     *
+     * @param sideC
      */
     public void setSideC(int sideC) {
         this.sideC = sideC;
