@@ -12,7 +12,7 @@ package co.edu.unicundi.figurasgeometricas;
  * @version 1.0.0
  * @since 1.0.0
  */
-public class Circle extends Figure{
+public class Circle extends Figure {
     
     private int radius;
 
@@ -38,6 +38,12 @@ public class Circle extends Figure{
         System.out.println("EL PERÍMETRO DEL CÍRCULO ES: " + super.getPerimeter());
     }
 
+    @Override
+    public void printResultsHistory() {
+        System.out.println("RESUMEN DATOS: CÍRCULO \n " + "Radio: " + radius +
+                "\n Área: " + super.getArea() + "\n Perímetro: " + super.getPerimeter());     
+    }
+
     public int getRadius() {
         return radius;
     }
@@ -45,5 +51,5 @@ public class Circle extends Figure{
     public void setRadius(int radius) {
         this.radius = radius;
     }
-    
+   
 }

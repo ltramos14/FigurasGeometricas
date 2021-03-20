@@ -16,7 +16,7 @@ public class Triangle extends Figure {
 
     private int base;
 
-    private int heigth;
+    private int height;
 
     private int sideA;
 
@@ -26,7 +26,7 @@ public class Triangle extends Figure {
 
     public Triangle(int base, int heigth, int sideA, int sideB, int sideC) {
         this.base = base;
-        this.heigth = heigth;
+        this.height = heigth;
         this.sideA = sideA;
         this.sideB = sideB;
         this.sideC = sideC;
@@ -34,7 +34,7 @@ public class Triangle extends Figure {
 
     @Override
     public void calculateArea() {
-        super.setArea((base * heigth) / 2);
+        super.setArea((base * height) / 2);
     }
 
     @Override
@@ -65,6 +65,16 @@ public class Triangle extends Figure {
         }
     }
 
+    @Override
+    public void printResultsHistory() {
+         System.out.println("RESUMEN DATOS: TRIÁNGULO \n " + "Base: " + base +
+                 "\nAltura: " + height + "\n Área: " + super.getArea() + "\nLado A: "
+                 + sideA + "\nLado B: " + sideB + "\nLado C: "  + sideC +
+                 "\n Perímetro: "  + super.getPerimeter());
+    }
+    
+    
+
     public int getBase() {
         return base;
     }
@@ -73,12 +83,12 @@ public class Triangle extends Figure {
         this.base = base;
     }
 
-    public int getHeigth() {
-        return heigth;
+    public int getHeight() {
+        return height;
     }
 
-    public void setHeigth(int heigth) {
-        this.heigth = heigth;
+    public void setHeight(int height) {
+        this.height = height;
     }
 
     public int getSideA() {

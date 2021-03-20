@@ -41,6 +41,14 @@ public class Rectangle extends Figure{
         System.out.println("EL PERÍMETRO DEL RECTÁNGULO ES: " + super.getPerimeter());
     }
 
+    @Override
+    public void printResultsHistory() {
+         System.out.println("RESUMEN DATOS: RECTÁNGULO \n " + "Base: " + base +
+                 "\nAltura: " + height + "\n Área: " + super.getArea() + 
+                 "\n Perímetro: "  + super.getPerimeter());      
+    }
+
+    
     public int getBase() {
         return base;
     }

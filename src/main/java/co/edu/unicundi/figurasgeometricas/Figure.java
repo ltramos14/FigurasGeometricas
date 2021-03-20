@@ -12,7 +12,7 @@ package co.edu.unicundi.figurasgeometricas;
  * @version 1.0.0
  * @since 1.0.0
  */
-public abstract class Figure {
+public abstract class Figure implements IResultsHistory{
     
     private double area;
     

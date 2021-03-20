@@ -38,6 +38,15 @@ public class Square extends Figure{
         System.out.println("EL PERÍMETRO DEL CUADRADO ES: " + super.getPerimeter());
     }
 
+    
+    @Override
+    public void printResultsHistory() {
+       System.out.println("RESUMEN DATOS: CUADRADO \n " + "Lado: " + side +
+                "\n Área: " + super.getArea() + "\n Perímetro: " + super.getPerimeter());
+        
+    }
+    
+    
     public int getSide() {
         return side;
     }
@@ -45,5 +54,5 @@ public class Square extends Figure{
     public void setSide(int side) {
         this.side = side;
     }
-    
+
 }
