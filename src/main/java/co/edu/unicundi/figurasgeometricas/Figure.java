@@ -6,14 +6,17 @@
 package co.edu.unicundi.figurasgeometricas;
 
 /**
- *
- * @author nicon
+ * 
+ * @author Tatiana Ramos Villanueva
+ * @author Nicolás Nieto Cárdenas
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public abstract class Figure {
     
-    public double area;
+    private double area;
     
-    public double perimeter;
+    private double perimeter;
    
     
     public abstract void calculateArea();
@@ -21,4 +24,22 @@ public abstract class Figure {
     public abstract void calculatePerimeter();
     
     public abstract void printAreaAndPerimeter();
+
+    
+    public double getArea() {
+        return area;
+    }
+
+    public void setArea(double area) {
+        this.area = area;
+    }
+
+    public double getPerimeter() {
+        return perimeter;
+    }
+
+    public void setPerimeter(double perimeter) {
+        this.perimeter = perimeter;
+    }
+    
 }

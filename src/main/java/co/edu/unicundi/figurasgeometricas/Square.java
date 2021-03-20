@@ -6,12 +6,15 @@
 package co.edu.unicundi.figurasgeometricas;
 
 /**
- *
- * @author nicon
+ * 
+ * @author Tatiana Ramos Villanueva
+ * @author Nicolás Nieto Cárdenas
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Square extends Figure{
     
-    int side;
+    private int side;
 
     public Square(int side) {
         this.side = side;
@@ -19,20 +22,28 @@ public class Square extends Figure{
 
     @Override
     public void calculateArea() {
-        area = Math.pow(side, 2);
+        super.setArea(Math.pow(side, 2));
     }
 
     @Override
     public void calculatePerimeter() {
-        perimeter = 4 * side;
+        super.setPerimeter(4 * side);
     }
 
     @Override
     public void printAreaAndPerimeter() {
         calculateArea();
         calculatePerimeter();
-        System.out.println("EL ÁREA DEL CUADRADO ES: " + area);
-        System.out.println("EL PERÍMETRO DEL CUADRADO ES: " + perimeter);
+        System.out.println("EL ÁREA DEL CUADRADO ES: " + super.getArea());
+        System.out.println("EL PERÍMETRO DEL CUADRADO ES: " + super.getPerimeter());
+    }
+
+    public int getSide() {
+        return side;
+    }
+
+    public void setSide(int side) {
+        this.side = side;
     }
     
 }

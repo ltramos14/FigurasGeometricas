@@ -6,12 +6,15 @@
 package co.edu.unicundi.figurasgeometricas;
 
 /**
- *
- * @author nicon
+ * 
+ * @author Tatiana Ramos Villanueva
+ * @author Nicolás Nieto Cárdenas
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Circle extends Figure{
     
-    int radius;
+    private int radius;
 
     public Circle(int radius) {
         this.radius = radius;
@@ -19,20 +22,28 @@ public class Circle extends Figure{
 
     @Override
     public void calculateArea() {
-        area = Math.PI * Math.pow(radius, 2);
+        super.setArea(Math.PI * Math.pow(radius, 2)); 
     }
 
     @Override
     public void calculatePerimeter() {
-       perimeter = 2 * Math.PI * radius;      
+       super.setPerimeter(2 * Math.PI * radius);      
     }
 
     @Override
     public void printAreaAndPerimeter() {
         calculateArea();
         calculatePerimeter();
-        System.out.println("EL ÁREA DEL CÍRCULO ES: " + area);
-        System.out.println("EL PERÍMETRO DEL CÍRCULO ES: " + perimeter);
+        System.out.println("EL ÁREA DEL CÍRCULO ES: " + super.getArea());
+        System.out.println("EL PERÍMETRO DEL CÍRCULO ES: " + super.getPerimeter());
+    }
+
+    public int getRadius() {
+        return radius;
+    }
+
+    public void setRadius(int radius) {
+        this.radius = radius;
     }
     
 }

@@ -6,20 +6,23 @@
 package co.edu.unicundi.figurasgeometricas;
 
 /**
- *
- * @author nicon
+ * 
+ * @author Tatiana Ramos Villanueva
+ * @author Nicolás Nieto Cárdenas
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Triangle extends Figure {
 
-    int base;
+    private int base;
 
-    int heigth;
+    private int heigth;
 
-    int sideA;
+    private int sideA;
 
-    int sideB;
+    private int sideB;
 
-    int sideC;
+    private int sideC;
 
     public Triangle(int base, int heigth, int sideA, int sideB, int sideC) {
         this.base = base;
@@ -31,12 +34,12 @@ public class Triangle extends Figure {
 
     @Override
     public void calculateArea() {
-        area = (base * heigth) / 2;
+        super.setArea((base * heigth) / 2);
     }
 
     @Override
     public void calculatePerimeter() {
-        perimeter = sideA + sideB + sideC;
+        super.setPerimeter(sideA + sideB + sideC);
     }
 
     @Override
@@ -46,19 +49,60 @@ public class Triangle extends Figure {
 
         if (sideA == sideB && sideA == sideC) {
 
-            System.out.println("EL ÁREA DEL TRIÁNGULO EQUILÁTERO ES: " + area);
-            System.out.println("EL PERÍMETRO DEL TRIÁNGULO EQUILÁTERO  ES: " + perimeter);
+            System.out.println("EL ÁREA DEL TRIÁNGULO EQUILÁTERO ES: " + super.getArea());
+            System.out.println("EL PERÍMETRO DEL TRIÁNGULO EQUILÁTERO  ES: " + super.getPerimeter());
             
         } else if (sideA == sideB || sideA == sideC || sideB == sideC) {
 
-            System.out.println("EL ÁREA DEL TRIÁNGULO ISÓSCELES ES: " + area);
-            System.out.println("EL PERÍMETRO DEL TRIÁNGULO ISÓSCELES  ES: " + perimeter);
+            System.out.println("EL ÁREA DEL TRIÁNGULO ISÓSCELES ES: " + super.getArea());
+            System.out.println("EL PERÍMETRO DEL TRIÁNGULO ISÓSCELES  ES: " + super.getPerimeter());
             
         } else {
 
-            System.out.println("EL ÁREA DEL TRIÁNGULO ESCALENO ES: " + area);
-            System.out.println("EL PERÍMETRO DEL TRIÁNGULO ESCALENO  ES: " + perimeter);
+            System.out.println("EL ÁREA DEL TRIÁNGULO ESCALENO ES: " + super.getArea());
+            System.out.println("EL PERÍMETRO DEL TRIÁNGULO ESCALENO  ES: " + super.getPerimeter());
+        
         }
+    }
+
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase(int base) {
+        this.base = base;
+    }
+
+    public int getHeigth() {
+        return heigth;
+    }
+
+    public void setHeigth(int heigth) {
+        this.heigth = heigth;
+    }
+
+    public int getSideA() {
+        return sideA;
+    }
+
+    public void setSideA(int sideA) {
+        this.sideA = sideA;
+    }
+
+    public int getSideB() {
+        return sideB;
+    }
+
+    public void setSideB(int sideB) {
+        this.sideB = sideB;
+    }
+
+    public int getSideC() {
+        return sideC;
+    }
+
+    public void setSideC(int sideC) {
+        this.sideC = sideC;
     }
 
 }

@@ -6,13 +6,17 @@
 package co.edu.unicundi.figurasgeometricas;
 
 /**
- *
- * @author nicon
+ * 
+ * @author Tatiana Ramos Villanueva
+ * @author Nicolás Nieto Cárdenas
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class Rectangle extends Figure{
 
-    int base;
-    int height;
+    private int base;
+    
+    private int height;
 
     public Rectangle(int base, int height) {
         this.base = base;
@@ -21,22 +25,36 @@ public class Rectangle extends Figure{
 
     @Override
     public void calculateArea() {
-        area = base * height;
+        super.setArea(base * height);
     }
 
     @Override
     public void calculatePerimeter() {
-       perimeter = 2 * (base + height);      
+       super.setPerimeter(2 * (base + height));      
     }
 
     @Override
     public void printAreaAndPerimeter() {
         calculateArea();
         calculatePerimeter();
-        System.out.println("EL ÁREA DEL RECTÁNGULO ES: " + area);
-        System.out.println("EL PERÍMETRO DEL RECTÁNGULO ES: " + perimeter);
+        System.out.println("EL ÁREA DEL RECTÁNGULO ES: " + super.getArea());
+        System.out.println("EL PERÍMETRO DEL RECTÁNGULO ES: " + super.getPerimeter());
     }
-    
-    
+
+    public int getBase() {
+        return base;
+    }
+
+    public void setBase(int base) {
+        this.base = base;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+    public void setHeight(int height) {
+        this.height = height;
+    }
     
 }
